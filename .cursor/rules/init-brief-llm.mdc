@@ -1,0 +1,42 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Project Context Initialization
+
+Provides an LLM session with essential project context using repomix for comprehensive codebase analysis.
+
+When starting a new chat session or when an LLM needs project context:
+
+## Primary Method: Repomix Analysis
+
+1. **Generate Fresh Project Context**:
+   - Clean any existing temp files: `Remove-Item -Path "temp/project-context.md" -Force -ErrorAction SilentlyContinue`
+   - Run repomix to generate comprehensive project overview: `repomix --compress -o temp/project-context.md --style markdown --no-git-sort-by-changes .`
+   - Read the generated `temp/project-context.md` file completely
+
+2. **Context Understanding**:
+   - The repomix output includes:
+     - Complete directory structure
+     - All source files with full content
+     - File summary with top files by size/importance
+     - Security analysis
+   - Focus on understanding the project's architecture, main components, and data flow
+
+## Fallback Method (if repomix fails):
+
+1. **Manual Project Overview**:
+   - Read all MD files in project root for high-level description and objectives
+   - Read other root files (package.json, etc.)
+
+2. **Technical Stack & Structure**:
+   - View package.json for dependencies and scripts
+   - Read subfolders recursively to understand source file organization
+   - Read core source files to understand main functionality
+
+## Output Management:
+- Always save repomix output to `temp/` directory to avoid cluttering project
+- Never reuse old repomix outputs - always generate fresh analysis
+- Clean up temp files when session ends if needed 
+

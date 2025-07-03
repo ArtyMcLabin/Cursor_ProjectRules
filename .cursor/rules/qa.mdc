@@ -1,0 +1,27 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# QA Testing Workflow
+
+Perform QA testing after UI changes or feature implementation.
+
+1. After implementing UI features or fixing UI-related bugs, run browser-based tests using available browser automation tools
+2. Navigate to the relevant page(s) and verify initial page load:
+   - **Initial Page Load Check**: If navigation fails or the page content suggests a server/build error (e.g., "Cannot GET /page", "Application error", blank page, build tool error messages), this indicates a problem beyond typical UI interaction. Report this as a critical issue. Do not proceed with further UI interaction tests until this is resolved. Consider checking server logs if accessible.
+3. Interact with key elements (buttons, forms, inputs) using browser automation tools
+4. Verify that the UI behaves as expected:
+   - Elements appear/disappear correctly
+   - Text changes as expected
+   - Navigation occurs properly
+   - Use browser evaluation to check document content or specific element properties
+5. Verify that data is displayed correctly
+6. If problems are found (either in step 2 or during UI interaction steps 3-5), attempt to fix them
+7. Re-run tests starting from step 2
+8. Repeat testing and fixing until the feature is stable and the page loads correctly
+9. Only notify the user once QA passes
+
+note: This set of instructions was originally generated for web page testing, but the same principles apply to testing of other stuff, adapt if needed.
+
+**Summary:** Use browser automation tools (playwright MCP for web page testing) to test your results thoroughly. If the page itself doesn't load or shows fundamental errors, address that first. For UI interaction bugs, fix them and re-test. You are your own QA; don't involve the user in this iterative fixing process by default.

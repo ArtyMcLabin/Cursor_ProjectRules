@@ -1,0 +1,10 @@
+---
+description:
+globs: package.json , package-lock.json
+alwaysApply: false
+---
+# NPM Dependency Management
+
+Never directly edit [package.json](mdc:package.json) or [package-lock.json](mdc:package-lock.json) files - always use `npm install package-name` to add dependencies and ensure both files stay synchronized.
+
+

@@ -1,0 +1,19 @@
+---
+description: Vercel Deployment Workflow
+globs:
+alwaysApply: false
+---
+When asked to deploy a repository to Vercel, follow this CLI workflow:
+
+1. Navigate to the project directory.
+2. Run `vercel --yes` to deploy (use `--name project-name-lowercase` if the project name contains uppercase or special characters).
+3. Run `vercel git connect` to link the GitHub repository for automatic deployments.
+4. Run `vercel --prod` to ensure a production deployment.
+5. Run `vercel project ls` to obtain the final public URL.
+6. Update the GitHub repository description with the live demo link using:
+   `gh repo edit owner/repo --description "Description - Live demo: https://url"`
+7. Provide the clickable public URL as the final output.
+
+This workflow establishes a fully connected GitHub → Vercel pipeline with automatic deployments on every push.
+
+Always use the existing `VERCEL_TOKEN` environment variable (no additional authentication needed).

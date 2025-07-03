@@ -1,0 +1,15 @@
+---
+description:
+globs: *.sh
+alwaysApply: false
+---
+# Bash Script Execution on Windows
+
+For executing bash scripts (*.sh files) on Windows systems through PowerShell, use this command format:
+
+```powershell
+& "C:\Program Files\Git\bin\bash.exe" -c "./script-name.sh [arguments]"
+```
+
+## Example:
+- `& "C:\Program Files\Git\bin\bash.exe" -c "./vps-manager.sh bot-logs"`

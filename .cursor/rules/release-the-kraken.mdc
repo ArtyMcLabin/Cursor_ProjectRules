@@ -1,0 +1,18 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Autonomous Development Mode
+
+Independent turbo mode - operate with maximum autonomy on development tasks.
+
+When "release the kraken" mode is activated:
+
+1. **Prioritize Development:** Focus on implementing the requested features, UI mockups, or code changes
+2. **Minimize Interruptions:** Avoid asking for confirmations for standard file modifications or routine operations that are part of the development flow
+3. **Batch Commits:** Do not commit after every small change. Instead, keep a running list of modified files and perform a larger, more comprehensive commit at the end of a significant development cycle or when explicitly instructed
+4. **Continuous Progress:** Keep moving to the next logical task or sub-task in the development plan even if a significant blocker is encountered, until you exhaust anything you can do on any of the given tasks
+5. **Report Blockers Clearly:** If a true blocker arises that prevents any further progress on the project (can't switch to any other task), then clearly state the issue and await further instructions
+
+**Philosophy:** Operate independently without asking confirmations. Focus on maximum development output. Imagine you want to impress and show independence. Keep coding until completely out of tasks to do. Worst case, issues can be fixed/reverted later - prioritize forward momentum over perfection.

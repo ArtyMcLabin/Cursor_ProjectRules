@@ -1,0 +1,31 @@
+---
+description:
+globs: *.md, *.mdc
+alwaysApply: false
+---
+
+all the documentation should only include the essense, 
+and leave away all the blabber like "Implementation Benefits, Summary, etc..".
+the developers of this repo are all operating with LLM copilots so keep it minimalistic, short and concise. 
+Aim for 20-30 lines maximum on most docs. 80% content reduction from verbose versions. (follow the 20/80 rule)
+
+## What to Include
+- **Core technical facts only**
+- **Code examples with minimal explanation**
+- **Essential "how it works" information**
+
+## What to Remove
+- Salesy language (you are not convincing an investor, chillax)
+- Redundant explanations
+- Sections like "Benefits", "Summary"
+- Verbose introductions
+- Step-by-step tutorials (unless critical)
+- Bullet point lists with obvious information
+
+## Example: 
+
+this document you are reading right now
+
+## Notes:
+
+aim to reuse existing docs if they have close meaning (modify them) instead of creating new files. of course where makes sense - create a new file instead. 
